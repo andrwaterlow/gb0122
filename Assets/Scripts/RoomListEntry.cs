@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace Photon.Pun.Demo.Asteroids
-{
+
     public class RoomListEntry : MonoBehaviour
     {
         public Text RoomNameText;
         public Text RoomPlayersText;
         public Button JoinRoomButton;
+        public Text StateRoom;
 
         private string roomName;
 
@@ -24,12 +25,12 @@ namespace Photon.Pun.Demo.Asteroids
             });
         }
 
-        public void Initialize(string name, byte currentPlayers, byte maxPlayers)
+        public void Initialize(string name, byte currentPlayers, byte maxPlayers, string state)
         {
             roomName = name;
 
             RoomNameText.text = name;
+            StateRoom.text = state;
             RoomPlayersText.text = currentPlayers + " / " + maxPlayers;
         }
     }
-}
