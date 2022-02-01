@@ -67,7 +67,7 @@ namespace Photon.Pun.Demo.Asteroids
             ClearRoomListView();
 
             UpdateCachedRoomList(roomList);
-            UpdateRoomListView();
+            
         }
 
         public override void OnJoinedLobby()
@@ -108,7 +108,6 @@ namespace Photon.Pun.Demo.Asteroids
             // joining (or entering) a room invalidates any cached lobby room list (even if LeaveLobby was not called due to just joining a room)
             cachedRoomList.Clear();
 
-
             SetActivePanel(InsideRoomPanel.name);
 
             if (playerListEntries == null)
@@ -121,12 +120,12 @@ namespace Photon.Pun.Demo.Asteroids
                 GameObject entry = Instantiate(PlayerListEntryPrefab);
                 entry.transform.SetParent(InsideRoomPanel.transform);
                 entry.transform.localScale = Vector3.one;
-                entry.GetComponent<PlayerListEntry>().Initialize(p.ActorNumber, p.NickName);
+                
 
                 object isPlayerReady;
                 if (p.CustomProperties.TryGetValue(AsteroidsGame.PLAYER_READY, out isPlayerReady))
                 {
-                    entry.GetComponent<PlayerListEntry>().SetPlayerReady((bool) isPlayerReady);
+                    
                 }
 
                 playerListEntries.Add(p.ActorNumber, entry);
@@ -159,7 +158,7 @@ namespace Photon.Pun.Demo.Asteroids
             GameObject entry = Instantiate(PlayerListEntryPrefab);
             entry.transform.SetParent(InsideRoomPanel.transform);
             entry.transform.localScale = Vector3.one;
-            entry.GetComponent<PlayerListEntry>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
+            
 
             playerListEntries.Add(newPlayer.ActorNumber, entry);
 
@@ -195,7 +194,7 @@ namespace Photon.Pun.Demo.Asteroids
                 object isPlayerReady;
                 if (changedProps.TryGetValue(AsteroidsGame.PLAYER_READY, out isPlayerReady))
                 {
-                    entry.GetComponent<PlayerListEntry>().SetPlayerReady((bool) isPlayerReady);
+                    
                 }
             }
 
@@ -356,17 +355,6 @@ namespace Photon.Pun.Demo.Asteroids
             }
         }
 
-        private void UpdateRoomListView()
-        {
-            foreach (RoomInfo info in cachedRoomList.Values)
-            {
-                GameObject entry = Instantiate(RoomListEntryPrefab);
-                entry.transform.SetParent(RoomListContent.transform);
-                entry.transform.localScale = Vector3.one;
-                entry.GetComponent<RoomListEntry>().Initialize(info.Name, (byte)info.PlayerCount, info.MaxPlayers);
-
-                roomListEntries.Add(info.Name, entry);
-            }
-        }
+        
     }
 }
