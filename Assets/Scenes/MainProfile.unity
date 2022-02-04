@@ -347,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 900, y: -672.2}
+  m_AnchoredPosition: {x: 883, y: -738.7}
   m_SizeDelta: {x: 285.3, y: 57.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &227808935
@@ -2474,7 +2474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 900, y: -540}
+  m_AnchoredPosition: {x: 883, y: -606.5}
   m_SizeDelta: {x: 285.3, y: 57.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063709697
@@ -4285,7 +4285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 900, y: -407.80002}
+  m_AnchoredPosition: {x: 883, y: -474.30002}
   m_SizeDelta: {x: 285.3, y: 57.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655605660
@@ -6083,9 +6083,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1667873783}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1667873785}
+        m_TargetAssemblyTypeName: Launcher, Assembly-CSharp
+        m_MethodName: OnStartGameButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

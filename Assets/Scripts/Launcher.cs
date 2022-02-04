@@ -3,6 +3,7 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Launcher : MonoBehaviourPunCallbacks
@@ -258,6 +259,11 @@ public class Launcher : MonoBehaviourPunCallbacks
 
         PhotonNetwork.CreateRoom(_roomName, options);
         GUIUtility.systemCopyBuffer = _roomName;
+    }
+
+    public void OnStartGameButtonClick()
+    {
+        SceneManager.LoadScene("PlayScene");
     }
 
     #region UNITY
