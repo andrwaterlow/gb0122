@@ -1,0 +1,2 @@
+com/DefaultCompany/DiabloOnline/BuildConfig.java
+ com.DefaultCompany.DiabloOnline.BuildConfig
